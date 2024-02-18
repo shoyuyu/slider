@@ -1,0 +1,84 @@
+@use "sass:math";
+
+$slider-main-size: 600px;
+$slider-list-size: 400px;
+$slider-bg-color: #212121;
+$text-color: #333;
+
+%text-style {
+  margin: 0 10px;
+  color: $text-color;
+  word-break: break-all;
+}
+
+// Slider
+.slider {
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: $slider-bg-color;
+  }
+
+  > ul {
+    width: calc($slider-main-size + $slider-list-size);
+    margin: 0 auto;
+
+    .photo-title {
+      font-size: 3rem;
+      font-weight: bold;
+
+      @extend %text-style;
+    }
+
+    .photo-description {
+      padding: 15px;
+      font-size: 1.4rem;
+
+      @extend %text-style;
+    }
+  }
+
+  .slider-main {
+    div {
+      width: $slider-main-size;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .slider-list {
+    margin: 0 10px;
+
+    &-images {
+      width: $slider-list-size;
+      overflow: hidden;
+
+      li {
+        float: left;
+
+        img {
+          width: math.div($slider-list-size, 2);
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+// Image element fade effect
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}

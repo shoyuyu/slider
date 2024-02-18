@@ -1,0 +1,68 @@
+.slider > ul .photo-description,
+.slider > ul .photo-title {
+  margin: 0 10px;
+  color: #333;
+  word-break: break-all;
+}
+
+.slider > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #212121;
+}
+
+.slider > ul {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.slider > ul .photo-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.slider > ul .photo-description {
+  padding: 15px;
+  font-size: 1.4rem;
+}
+
+.slider .slider-main div {
+  width: 600px;
+}
+
+.slider .slider-main div img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.slider .slider-list {
+  margin: 0 10px;
+}
+
+.slider .slider-list-images {
+  width: 400px;
+  overflow: hidden;
+}
+
+.slider .slider-list-images li {
+  float: left;
+}
+
+.slider .slider-list-images li img {
+  width: 200px;
+  height: auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
